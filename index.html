@@ -21,12 +21,14 @@
             --shadow-color: rgba(0, 0, 0, 0.4);
             --ab-button-color: #a89a8c;
             --ab-button-hover: #e8e4e1;
+
             /* LABL Colors (integrated into main palette) */
             --cat-dark-brown: #5d4e41;
             --cat-medium-brown: #7b6a5a;
             --cat-light-tan: #9c9184;
             --cat-creamy-white: #e8e4e1;
             --cat-warm-highlight: #d4a076;
+
             --labl-container-bg: rgba(61, 49, 39, 0.85);
             --labl-input-bg: rgba(255, 255, 255, 0.1);
             --labl-input-border: rgba(255, 255, 255, 0.2);
@@ -62,8 +64,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 900px;
-            height: 600px;
+            width: 900px; /* Adjusted default width */
+            height: 600px; /* Adjusted default height */
             background: var(--container-bg);
             border: 1px solid var(--border-color);
             box-shadow: 0 8px 25px var(--shadow-color);
@@ -95,7 +97,7 @@
             display: flex;
             gap: 2px;
         }
-
+        
         .tab-button {
             background-color: var(--tab-color);
             border: none;
@@ -109,7 +111,7 @@
             border-radius: 6px 6px 0 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 8px; /* Space between text and AB button */
         }
 
         .tab-button:hover {
@@ -135,12 +137,12 @@
             font-weight: bold;
             transition: background-color 0.2s ease, color 0.2s ease;
         }
-
+        
         .tab-button .ab-cloak-button:hover {
             background-color: var(--ab-button-hover);
             color: var(--header-bg);
         }
-
+        
         .tab-button.active .ab-cloak-button {
             background-color: var(--ab-button-hover);
             color: var(--header-bg);
@@ -178,14 +180,14 @@
             background: #e74c3c;
             color: white;
         }
-
+        
         .reset-button {
             font-size: 16px;
             width: auto;
             border-radius: 8px;
             padding: 0 10px;
         }
-
+        
         .reset-button:hover {
             background: var(--button-hover);
             color: white;
@@ -208,18 +210,17 @@
             background-color: var(--container-bg);
             overflow-y: auto;
         }
-
+        
         /* About Page Styles */
         .about-page h3 {
             color: var(--text-color);
             margin-bottom: 5px;
         }
-
         .about-page p, .about-page li {
             font-size: 15px;
             color: var(--secondary-text-color);
         }
-
+        
         /* AB Cloak Launcher Panel - Custom Styling */
         .ab-cloak-page {
             display: flex;
@@ -231,7 +232,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(8px);
         }
-
         .ab-cloak-page h1 {
             font-size: 2.5rem;
             font-weight: 700;
@@ -239,7 +239,6 @@
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             margin-bottom: 2rem;
         }
-
         .ab-cloak-page .main-controls {
             display: flex;
             flex-direction: column;
@@ -247,7 +246,6 @@
             margin-bottom: 1.5rem;
             width: 100%;
         }
-
         .ab-cloak-page label {
             display: block;
             font-size: 1.1rem;
@@ -255,7 +253,6 @@
             font-weight: 500;
             margin-bottom: 0.8rem;
         }
-
         .ab-cloak-page input[type="text"] {
             padding: 15px 20px;
             border: 1px solid var(--labl-input-border);
@@ -268,13 +265,11 @@
             box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
             box-sizing: border-box;
         }
-
         .ab-cloak-page input[type="text"]:focus {
             outline: none;
             border-color: var(--labl-input-focus);
             box-shadow: 0 0 0 3px rgba(212, 160, 118, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-
         .ab-cloak-page #launchButton {
             padding: 16px 35px;
             background-color: var(--labl-button-primary-bg);
@@ -289,18 +284,15 @@
             box-shadow: 0 6px 20px var(--labl-button-shadow);
             text-transform: uppercase;
         }
-
         .ab-cloak-page #launchButton:hover {
             background-color: var(--labl-button-primary-hover);
             transform: translateY(-3px);
             box-shadow: 0 8px 25px var(--labl-button-shadow);
         }
-
         .ab-cloak-page #launchButton:active {
             transform: translateY(0);
             box-shadow: 0 4px 15px var(--labl-button-shadow);
         }
-
         .ab-cloak-page .quick-links-section {
             display: flex;
             flex-direction: column;
@@ -309,21 +301,18 @@
             border-top: 1px solid var(--labl-border-light);
             width: 100%;
         }
-
         .ab-cloak-page .quick-links-title {
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--cat-light-tan);
             margin-bottom: 0.5rem;
         }
-
         .ab-cloak-page .quick-links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 0.8rem;
             justify-items: center;
         }
-
         .ab-cloak-page .quick-link-button {
             width: 100%;
             padding: 12px 15px;
@@ -338,40 +327,34 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
             text-transform: none;
         }
-
         .ab-cloak-page .quick-link-button:hover {
             background-color: var(--labl-button-secondary-hover);
             color: var(--cat-creamy-white);
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
-
         .ab-cloak-page .quick-link-button:active {
             transform: translateY(0);
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
         }
-
+        
         /* Tools Page Styles */
         .tools-section {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
         .tools-section label {
             font-size: 15px;
             color: var(--secondary-text-color);
         }
-
         .tools-section h3 {
             color: var(--text-color);
             margin-bottom: 5px;
         }
-
         .tools-section input[type="checkbox"] {
             margin-right: 5px;
         }
-
         .tools-section textarea {
             width: 100%;
             height: 100px;
@@ -384,7 +367,6 @@
             background: var(--header-bg);
             color: var(--text-color);
         }
-
         .tools-section button {
             padding: 10px 18px;
             background-color: var(--button-color);
@@ -395,11 +377,9 @@
             transition: background-color 0.2s;
             font-weight: bold;
         }
-
         .tools-section button:hover {
             background-color: var(--button-hover);
         }
-
         .tools-section pre {
             background: var(--header-bg);
             padding: 12px;
@@ -420,93 +400,22 @@
         // Initialize Particles.js
         particlesJS('particle-canvas', {
             "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#a89a8c"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#a89a8c",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
+                "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#a89a8c" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#a89a8c", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
             },
             "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
+                "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
             },
             "retina_detect": true
         });
-
+    </script>
+    <script>
         function createChatGPTpopup() {
             // Main container
             const chatContainer = document.createElement("div");
@@ -551,7 +460,7 @@
             chatCloakBtn.innerText = "AB";
             chatTab.appendChild(chatCloakBtn);
             tabContainer.appendChild(chatTab);
-
+            
             // Proxy Tab & Button
             const proxyTab = document.createElement("button");
             proxyTab.classList.add("tab-button");
@@ -563,18 +472,6 @@
             proxyCloakBtn.innerText = "AB";
             proxyTab.appendChild(proxyCloakBtn);
             tabContainer.appendChild(proxyTab);
-
-            // Proxy 2 Tab & Button
-            const proxy2Tab = document.createElement("button");
-            proxy2Tab.classList.add("tab-button");
-            const proxy2TabSpan = document.createElement("span");
-            proxy2TabSpan.innerText = "Proxy 2";
-            proxy2Tab.appendChild(proxy2TabSpan);
-            const proxy2CloakBtn = document.createElement("button");
-            proxy2CloakBtn.classList.add("ab-cloak-button");
-            proxy2CloakBtn.innerText = "AB";
-            proxy2Tab.appendChild(proxy2CloakBtn);
-            tabContainer.appendChild(proxy2Tab);
 
             // Tools Tab
             const toolsTab = document.createElement("button");
@@ -618,7 +515,7 @@
                 <br>
                 <h3>Features:</h3>
                 <ul>
-                    <li>- Navigate between tabs for Google, AI, Proxy, Proxy 2, and a custom launcher.</li>
+                    <li>- Navigate between tabs for Google, AI, a web proxy, and a custom launcher.</li>
                     <li>- The entire popup is draggable and resizable for convenience.</li>
                     <li>- Use the "Tools" tab to enable right-clicking or execute custom JavaScript code.</li>
                     <li>- Use the "AB" button within a tab to launch that page in a new, cloaked about:blank window.</li>
@@ -626,6 +523,7 @@
                 </ul>
             `;
             chatContainer.appendChild(aboutContainer);
+
 
             // Tools Panel
             const toolsContainer = document.createElement("div");
@@ -645,7 +543,7 @@
             rightClickSection.appendChild(rightClickCheckbox);
             rightClickSection.appendChild(rightClickLabel);
             toolsContainer.appendChild(rightClickSection);
-
+            
             // Tools section: Javascript Executor
             const codeExecutorSection = document.createElement("div");
             codeExecutorSection.classList.add("tools-section");
@@ -678,9 +576,11 @@
                         <button class="quick-link-button" data-url="https://qyutxwivpd.thesqueakandoilchart.com/">VaporV3 1</button>
                         <button class="quick-link-button" data-url="https://classroom.google.com.alcrb.ru">VaporV3 2</button>
                         <button class="quick-link-button" data-url="https://vapor.my.cdn.cloudflare.net">VaporV3 3</button>
+
                         <button class="quick-link-button" data-url="https://gn-math.dev/">GN-Math 1</button>
                         <button class="quick-link-button" data-url="https://genizy-math.vercel.app/">GN-Math 2</button>
                         <button class="quick-link-button" data-url="https://cowgvavktw.lifescienceventurelab.com/">GN-Math 3</button>
+
                         <button class="quick-link-button" data-url="https://drive.google.com.fpr.net/">RammerHead 1</button>
                         <button class="quick-link-button" data-url="https://hsym1.lesuspect.com/">RammerHead 2</button>
                         <button class="quick-link-button" data-url="https://rammerhead.is-confirmed.gay/">RammerHead 3</button>
@@ -700,10 +600,11 @@
                 </section>
             `;
             chatContainer.appendChild(abCloakContainer);
-
+            
             // Tab functionality
             function setActiveTab(activeTab) {
-                const tabs = [aboutTab, googleTab, chatTab, proxyTab, proxy2Tab, toolsTab, abCloakTab];
+                const tabs = [aboutTab, googleTab, chatTab, proxyTab, toolsTab, abCloakTab];
+                
                 tabs.forEach(tab => {
                     tab.classList.remove("active");
                 });
@@ -711,7 +612,8 @@
 
                 const containers = [iframe, aboutContainer, toolsContainer, abCloakContainer];
                 containers.forEach(container => container.style.display = "none");
-
+                
+                // Show the appropriate container
                 if (activeTab === aboutTab) {
                     aboutContainer.style.display = "flex";
                 } else if (activeTab === toolsTab) {
@@ -723,11 +625,12 @@
                     iframe.style.display = "block";
                 }
             }
-
+            
             function setupABCloakPanel() {
                 const urlInput = abCloakContainer.querySelector('#urlInput');
                 const launchButton = abCloakContainer.querySelector('#launchButton');
                 const quickLinksGrid = abCloakContainer.querySelector('.quick-links-grid');
+                
                 if (launchButton) {
                     launchButton.onclick = () => {
                         const url = urlInput.value.trim();
@@ -735,6 +638,7 @@
                         launchURL(formattedUrl, true);
                     };
                 }
+
                 if (urlInput) {
                     urlInput.addEventListener('keypress', (e) => {
                         if (e.key === 'Enter') {
@@ -744,6 +648,7 @@
                         }
                     });
                 }
+                
                 if (quickLinksGrid) {
                     quickLinksGrid.querySelectorAll('.quick-link-button').forEach(button => {
                         button.onclick = () => {
@@ -779,26 +684,15 @@
             chatCloakBtn.addEventListener("click", () => {
                 launchURL("https://ai-bot-peach-seven.vercel.app/", true);
             });
-
+            
             proxyTab.addEventListener("click", (e) => {
                 if (!e.target.classList.contains('ab-cloak-button')) {
-                    iframe.src = "https://rammerhead.is-confirmed.gay/";
+                    iframe.src = "https://holyubofficial.net/";
                     setActiveTab(proxyTab);
                 }
             });
 
             proxyCloakBtn.addEventListener("click", () => {
-                launchURL("https://rammerhead.is-confirmed.gay/", true);
-            });
-
-            proxy2Tab.addEventListener("click", (e) => {
-                if (!e.target.classList.contains('ab-cloak-button')) {
-                    iframe.src = "https://holyubofficial.net/";
-                    setActiveTab(proxy2Tab);
-                }
-            });
-
-            proxy2CloakBtn.addEventListener("click", () => {
                 launchURL("https://holyubofficial.net/", true);
             });
 
@@ -809,14 +703,16 @@
             abCloakTab.addEventListener("click", () => {
                 setActiveTab(abCloakTab);
             });
-
+            
             // Universal Launcher Function
             function launchURL(url, inAboutBlank) {
                 if (!url) {
                     alert('Please enter a URL.');
                     return;
                 }
+                
                 const formattedUrl = url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+                
                 if (inAboutBlank) {
                     const newTab = window.open('about:blank', '_blank');
                     if (newTab) {
@@ -830,7 +726,15 @@
                                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                 <style>
                                     body { margin: 0; overflow: hidden; }
-                                    iframe { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: none; display: block; }
+                                    iframe {
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100vw;
+                                        height: 100vh;
+                                        border: none;
+                                        display: block;
+                                    }
                                 </style>
                             </head>
                             <body>
@@ -857,7 +761,7 @@
                     event.stopPropagation();
                 }
             };
-
+            
             rightClickCheckbox.addEventListener("change", function () {
                 if (this.checked) {
                     document.removeEventListener('contextmenu', contextMenuHandler, true);
@@ -875,10 +779,16 @@
                 sandbox.contentWindow.console.log = (message) => {
                     outputArea.textContent += message + '\n';
                 };
+                
                 try {
                     outputArea.textContent = 'Executing...\n';
                     const script = document.createElement("script");
-                    script.textContent = `try { const result = eval(decodeURIComponent('${encodeURIComponent(code)}')); window.console.log('Result: ' + result); } catch(error) { window.console.log('Error: ' + error.message); }`;
+                    script.textContent = `try {
+                        const result = eval(decodeURIComponent('${encodeURIComponent(code)}'));
+                        window.console.log('Result: ' + result);
+                    } catch(error) {
+                        window.console.log('Error: ' + error.message);
+                    }`;
                     sandbox.contentDocument.body.appendChild(script);
                 } catch (error) {
                     outputArea.textContent = `Setup Error: ${error.message}`;
@@ -886,10 +796,10 @@
                     setTimeout(() => document.body.removeChild(sandbox), 500);
                 }
             });
-
+            
             // Close button logic
             closeButton.onclick = () => document.body.removeChild(chatContainer);
-
+            
             // Reset button logic
             resetButton.onclick = () => {
                 window.location.reload();
@@ -897,6 +807,7 @@
 
             // Dragging logic
             let isDragging = false, offsetX, offsetY;
+
             chatHeader.addEventListener("mousedown", (e) => {
                 if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('.tab-container')) {
                     isDragging = false;
