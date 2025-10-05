@@ -21,6 +21,23 @@
             --shadow-color: rgba(0, 0, 0, 0.4);
             --ab-button-color: #a89a8c;
             --ab-button-hover: #e8e4e1;
+            /* LABL Colors (integrated into main palette) */
+            --cat-dark-brown: #5d4e41;
+            --cat-medium-brown: #7b6a5a;
+            --cat-light-tan: #9c9184;
+            --cat-creamy-white: #e8e4e1;
+            --cat-warm-highlight: #d4a076;
+            --labl-container-bg: rgba(61, 49, 39, 0.85);
+            --labl-input-bg: rgba(255, 255, 255, 0.1);
+            --labl-input-border: rgba(255, 255, 255, 0.2);
+            --labl-input-focus: var(--cat-warm-highlight);
+            --labl-button-primary-bg: var(--cat-warm-highlight);
+            --labl-button-primary-hover: #c98e60;
+            --labl-button-secondary-bg: var(--cat-medium-brown);
+            --labl-button-secondary-hover: #6a5a4b;
+            --labl-button-text-color: var(--cat-creamy-white);
+            --labl-button-shadow: rgba(0, 0, 0, 0.4);
+            --labl-border-light: rgba(255, 255, 255, 0.2);
         }
 
         body {
@@ -202,6 +219,198 @@
             font-size: 15px;
             color: var(--secondary-text-color);
         }
+
+        /* AB Cloak Launcher Panel - Custom Styling */
+        .ab-cloak-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 4rem;
+            background-color: var(--labl-container-bg);
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        .ab-cloak-page h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--cat-creamy-white);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .ab-cloak-page .main-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .ab-cloak-page label {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--cat-light-tan);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .ab-cloak-page input[type="text"] {
+            padding: 15px 20px;
+            border: 1px solid var(--labl-input-border);
+            border-radius: 8px;
+            width: 100%;
+            background-color: var(--labl-input-bg);
+            color: var(--cat-creamy-white);
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .ab-cloak-page input[type="text"]:focus {
+            outline: none;
+            border-color: var(--labl-input-focus);
+            box-shadow: 0 0 0 3px rgba(212, 160, 118, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .ab-cloak-page #launchButton {
+            padding: 16px 35px;
+            background-color: var(--labl-button-primary-bg);
+            color: var(--labl-button-text-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            box-shadow: 0 6px 20px var(--labl-button-shadow);
+            text-transform: uppercase;
+        }
+
+        .ab-cloak-page #launchButton:hover {
+            background-color: var(--labl-button-primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--labl-button-shadow);
+        }
+
+        .ab-cloak-page #launchButton:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px var(--labl-button-shadow);
+        }
+
+        .ab-cloak-page .quick-links-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--labl-border-light);
+            width: 100%;
+        }
+
+        .ab-cloak-page .quick-links-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--cat-light-tan);
+            margin-bottom: 0.5rem;
+        }
+
+        .ab-cloak-page .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.8rem;
+            justify-items: center;
+        }
+
+        .ab-cloak-page .quick-link-button {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--labl-button-secondary-bg);
+            color: var(--labl-button-text-color);
+            border: 1px solid var(--labl-border-light);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-transform: none;
+        }
+
+        .ab-cloak-page .quick-link-button:hover {
+            background-color: var(--labl-button-secondary-hover);
+            color: var(--cat-creamy-white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .ab-cloak-page .quick-link-button:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tools Page Styles */
+        .tools-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .tools-section label {
+            font-size: 15px;
+            color: var(--secondary-text-color);
+        }
+
+        .tools-section h3 {
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .tools-section input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .tools-section textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px;
+            font-family: 'monospace';
+            box-sizing: border-box;
+            background: var(--header-bg);
+            color: var(--text-color);
+        }
+
+        .tools-section button {
+            padding: 10px 18px;
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: bold;
+        }
+
+        .tools-section button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .tools-section pre {
+            background: var(--header-bg);
+            padding: 12px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+        }
     </style>
 </head>
 <body>
@@ -331,6 +540,18 @@
             googleTab.appendChild(googleCloakBtn);
             tabContainer.appendChild(googleTab);
 
+            // AI Tab & Button
+            const chatTab = document.createElement("button");
+            chatTab.classList.add("tab-button");
+            const chatTabSpan = document.createElement("span");
+            chatTabSpan.innerText = "AI";
+            chatTab.appendChild(chatTabSpan);
+            const chatCloakBtn = document.createElement("button");
+            chatCloakBtn.classList.add("ab-cloak-button");
+            chatCloakBtn.innerText = "AB";
+            chatTab.appendChild(chatCloakBtn);
+            tabContainer.appendChild(chatTab);
+
             // Proxy Tab & Button
             const proxyTab = document.createElement("button");
             proxyTab.classList.add("tab-button");
@@ -354,6 +575,18 @@
             proxy2CloakBtn.innerText = "AB";
             proxy2Tab.appendChild(proxy2CloakBtn);
             tabContainer.appendChild(proxy2Tab);
+
+            // Tools Tab
+            const toolsTab = document.createElement("button");
+            toolsTab.classList.add("tab-button");
+            toolsTab.innerText = "Tools";
+            tabContainer.appendChild(toolsTab);
+
+            // AB Cloak Tab
+            const abCloakTab = document.createElement("button");
+            abCloakTab.classList.add("tab-button");
+            abCloakTab.innerText = "AB Cloak";
+            tabContainer.appendChild(abCloakTab);
 
             // Control Buttons (Reset and Close)
             const controlButtons = document.createElement("div");
@@ -381,33 +614,143 @@
             aboutContainer.style.display = "none";
             aboutContainer.innerHTML = `
                 <h3>About This Tool</h3>
-                <p>This is a custom-made browser utility designed to help you access web content from a floating, draggable, and resizable window. It includes multiple proxy options to enhance your browsing experience.</p>
+                <p>This is a custom-made browser utility designed to help you access web content from a floating, draggable, and resizable window. It includes a built-in proxy and various tools to enhance your browsing experience.</p>
                 <br>
                 <h3>Features:</h3>
                 <ul>
-                    <li>- Navigate between tabs for Google, Proxy, and Proxy 2.</li>
+                    <li>- Navigate between tabs for Google, AI, Proxy, Proxy 2, and a custom launcher.</li>
                     <li>- The entire popup is draggable and resizable for convenience.</li>
+                    <li>- Use the "Tools" tab to enable right-clicking or execute custom JavaScript code.</li>
                     <li>- Use the "AB" button within a tab to launch that page in a new, cloaked about:blank window.</li>
                     <li>- Press Ctrl + E to hide or show the popup quickly.</li>
                 </ul>
             `;
             chatContainer.appendChild(aboutContainer);
 
+            // Tools Panel
+            const toolsContainer = document.createElement("div");
+            toolsContainer.classList.add("content-panel");
+            toolsContainer.style.display = "none";
+            chatContainer.appendChild(toolsContainer);
+
+            // Tools section: Right-click Toggler
+            const rightClickSection = document.createElement("div");
+            rightClickSection.classList.add("tools-section");
+            const rightClickCheckbox = document.createElement("input");
+            rightClickCheckbox.type = "checkbox";
+            rightClickCheckbox.id = "rightClickToggle";
+            const rightClickLabel = document.createElement("label");
+            rightClickLabel.innerText = "Enable Right Clicking";
+            rightClickLabel.setAttribute("for", "rightClickToggle");
+            rightClickSection.appendChild(rightClickCheckbox);
+            rightClickSection.appendChild(rightClickLabel);
+            toolsContainer.appendChild(rightClickSection);
+
+            // Tools section: Javascript Executor
+            const codeExecutorSection = document.createElement("div");
+            codeExecutorSection.classList.add("tools-section");
+            const codeInputLabel = document.createElement("label");
+            codeInputLabel.innerText = "Enter Javascript Code:";
+            const codeInput = document.createElement("textarea");
+            const runCodeButton = document.createElement("button");
+            runCodeButton.innerText = "Execute";
+            const outputArea = document.createElement("pre");
+            codeExecutorSection.appendChild(codeInputLabel);
+            codeExecutorSection.appendChild(codeInput);
+            codeExecutorSection.appendChild(runCodeButton);
+            codeExecutorSection.appendChild(outputArea);
+            toolsContainer.appendChild(codeExecutorSection);
+
+            // AB Cloak Launcher Panel
+            const abCloakContainer = document.createElement("div");
+            abCloakContainer.classList.add("content-panel", "ab-cloak-page");
+            abCloakContainer.style.display = "none";
+            abCloakContainer.innerHTML = `
+                <h1>Lumi's ab launcher</h1>
+                <div class="main-controls">
+                    <label for="urlInput">Enter URL:</label>
+                    <input type="text" id="urlInput" placeholder="https://example.com">
+                    <button id="launchButton">Launch Site</button>
+                </div>
+                <section class="quick-links-section">
+                    <h2 class="quick-links-title">Quick Links</h2>
+                    <div class="quick-links-grid">
+                        <button class="quick-link-button" data-url="https://qyutxwivpd.thesqueakandoilchart.com/">VaporV3 1</button>
+                        <button class="quick-link-button" data-url="https://classroom.google.com.alcrb.ru">VaporV3 2</button>
+                        <button class="quick-link-button" data-url="https://vapor.my.cdn.cloudflare.net">VaporV3 3</button>
+                        <button class="quick-link-button" data-url="https://gn-math.dev/">GN-Math 1</button>
+                        <button class="quick-link-button" data-url="https://genizy-math.vercel.app/">GN-Math 2</button>
+                        <button class="quick-link-button" data-url="https://cowgvavktw.lifescienceventurelab.com/">GN-Math 3</button>
+                        <button class="quick-link-button" data-url="https://drive.google.com.fpr.net/">RammerHead 1</button>
+                        <button class="quick-link-button" data-url="https://hsym1.lesuspect.com/">RammerHead 2</button>
+                        <button class="quick-link-button" data-url="https://rammerhead.is-confirmed.gay/">RammerHead 3</button>
+                        <button class="quick-link-button" data-url="https://drive.google.fpr.net/">RammerHead 4</button>
+                        <button class="quick-link-button" data-url="https://sleep.phonk.toilets.tk/">RammerHead 5</button>
+                        <button class="quick-link-button" data-url="https://tc44.smelly.cc/">RammerHead 6</button>
+                        <button class="quick-link-button" data-url="https://higuysbikuist.vercel.app">Bikuist Hub</button>
+                        <button class="quick-link-button" data-url="https://fheuwifuhewi.coolscience.cfd/">Truffed 1</button>
+                        <button class="quick-link-button" data-url="https://otherthings.coolscience.cfd/">Truffed 2</button>
+                        <button class="quick-link-button" data-url="https://jicwnew.coolscience.cfd/">Truffed 3</button>
+                        <button class="quick-link-button" data-url="https://fejijfsk.coolscience.cfd/">Truffed 4</button>
+                        <button class="quick-link-button" data-url="https://schoology.com.de/">Truffed 5</button>
+                        <button class="quick-link-button" data-url="https://npm.lat/">Truffed 6</button>
+                        <button class="quick-link-button" data-url="https://isuckdih.w3spaces.com/">Doge Unb 1</button>
+                        <button class="quick-link-button" data-url="https://jakolbeesaidthenwordagain.vercel.app/">Doge Unb 2</button>
+                    </div>
+                </section>
+            `;
+            chatContainer.appendChild(abCloakContainer);
+
             // Tab functionality
             function setActiveTab(activeTab) {
-                const tabs = [aboutTab, googleTab, proxyTab, proxy2Tab];
+                const tabs = [aboutTab, googleTab, chatTab, proxyTab, proxy2Tab, toolsTab, abCloakTab];
                 tabs.forEach(tab => {
                     tab.classList.remove("active");
                 });
                 activeTab.classList.add("active");
 
-                const containers = [iframe, aboutContainer];
+                const containers = [iframe, aboutContainer, toolsContainer, abCloakContainer];
                 containers.forEach(container => container.style.display = "none");
 
                 if (activeTab === aboutTab) {
                     aboutContainer.style.display = "flex";
+                } else if (activeTab === toolsTab) {
+                    toolsContainer.style.display = "flex";
+                } else if (activeTab === abCloakTab) {
+                    abCloakContainer.style.display = "flex";
+                    setupABCloakPanel();
                 } else {
                     iframe.style.display = "block";
+                }
+            }
+
+            function setupABCloakPanel() {
+                const urlInput = abCloakContainer.querySelector('#urlInput');
+                const launchButton = abCloakContainer.querySelector('#launchButton');
+                const quickLinksGrid = abCloakContainer.querySelector('.quick-links-grid');
+                if (launchButton) {
+                    launchButton.onclick = () => {
+                        const url = urlInput.value.trim();
+                        const formattedUrl = url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+                        launchURL(formattedUrl, true);
+                    };
+                }
+                if (urlInput) {
+                    urlInput.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') {
+                            const url = urlInput.value.trim();
+                            const formattedUrl = url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+                            launchURL(formattedUrl, true);
+                        }
+                    });
+                }
+                if (quickLinksGrid) {
+                    quickLinksGrid.querySelectorAll('.quick-link-button').forEach(button => {
+                        button.onclick = () => {
+                            const url = button.getAttribute('data-url');
+                            launchURL(url, true);
+                        };
+                    });
                 }
             }
 
@@ -424,6 +767,17 @@
 
             googleCloakBtn.addEventListener("click", () => {
                 launchURL("https://www.google.com/webhp?igu=1", true);
+            });
+
+            chatTab.addEventListener("click", (e) => {
+                if (!e.target.classList.contains('ab-cloak-button')) {
+                    iframe.src = "https://ai-bot-peach-seven.vercel.app/";
+                    setActiveTab(chatTab);
+                }
+            });
+
+            chatCloakBtn.addEventListener("click", () => {
+                launchURL("https://ai-bot-peach-seven.vercel.app/", true);
             });
 
             proxyTab.addEventListener("click", (e) => {
@@ -446,6 +800,14 @@
 
             proxy2CloakBtn.addEventListener("click", () => {
                 launchURL("https://holyubofficial.net/", true);
+            });
+
+            toolsTab.addEventListener("click", () => {
+                setActiveTab(toolsTab);
+            });
+
+            abCloakTab.addEventListener("click", () => {
+                setActiveTab(abCloakTab);
             });
 
             // Universal Launcher Function
@@ -487,6 +849,43 @@
 
             // Initial state: Show "About" tab
             setActiveTab(aboutTab);
+
+            // Right-click logic
+            let contextMenuBlocked = false;
+            const contextMenuHandler = function (event) {
+                if (contextMenuBlocked) {
+                    event.stopPropagation();
+                }
+            };
+
+            rightClickCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    document.removeEventListener('contextmenu', contextMenuHandler, true);
+                } else {
+                    document.addEventListener('contextmenu', contextMenuHandler, true);
+                }
+            });
+
+            // Javascript Executor logic
+            runCodeButton.addEventListener("click", () => {
+                const code = codeInput.value;
+                const sandbox = document.createElement("iframe");
+                sandbox.style.display = "none";
+                document.body.appendChild(sandbox);
+                sandbox.contentWindow.console.log = (message) => {
+                    outputArea.textContent += message + '\n';
+                };
+                try {
+                    outputArea.textContent = 'Executing...\n';
+                    const script = document.createElement("script");
+                    script.textContent = `try { const result = eval(decodeURIComponent('${encodeURIComponent(code)}')); window.console.log('Result: ' + result); } catch(error) { window.console.log('Error: ' + error.message); }`;
+                    sandbox.contentDocument.body.appendChild(script);
+                } catch (error) {
+                    outputArea.textContent = `Setup Error: ${error.message}`;
+                } finally {
+                    setTimeout(() => document.body.removeChild(sandbox), 500);
+                }
+            });
 
             // Close button logic
             closeButton.onclick = () => document.body.removeChild(chatContainer);
